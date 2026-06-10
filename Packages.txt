@@ -6,6 +6,7 @@ pip install mediapipe==0.10.14
 
 
 Running Process:
+1. Create folder name venv (to install specif packages) 
 1. .\venv\Scripts\activate
 2. Python: Select Interpreter
 3. .\venv\Scripts\python.exe
