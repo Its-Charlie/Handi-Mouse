@@ -1,46 +1,45 @@
-# Handimouse
+# Handi-Mouse: AI-Based Gesture Control System
 
-A gesture-controlled virtual mouse that lets users control their cursor using hand movements captured through a webcam. Built using Python, OpenCV, and MediaPipe, this project provides hands-free interaction ideal for accessibility and creative human-computer interaction.
+Handi-Mouse is a real-time, computer vision-driven system that allows users to control their computer's mouse and execution commands using natural hand gestures. By leveraging **Python**, **OpenCV**, and **MediaPipe**, the application maps complex tracking coordinates to system-level inputs using **PyAutoGUI**, entirely eliminating the need for physical hardware peripherals.
 
-## Packages Required:
-``` bash
-pip install opencv-python
-pip install mediapipe
-pip install pyautogui
-pip install numpy
-pip install opencv-contrib-python
-```
-## Features:
-- Hand Tracking using MediaPipe
-Detects hand landmarks in real-time using your webcam.
-- Cursor Control via Finger Movements
-The index finger controls the mouse pointer smoothly.
-- Left Click Gesture
-Performed when the index finger and thumb come close.
-- Right Click Gesture
-Triggered using a different finger combination.
-- Scrolling Feature
-Scrolls the screen based on hand movement (up/down).
-- Distance-based Gesture Recognition
-Measures fingertip distances to execute actions.
-- Real-time Visualization
-Displays detection window with hand landmarks.
-- Fully Hands-Free Interaction
-No hardware needed except a webcam.
+---
 
-## Gestures Used in Handi-Mouse:
+## 🚀 Demo Video
+https://github.com/user-attachments/assets/YOUR-VIDEO-LINK-HERE
 
-***Right Hand Gestures:-***
-- Move index finger → Move mouse cursor
-- Thumb + Index finger pinch → Right click
-- Thumb + Middle finger pinch → Enable/disable scroll mode
-- Move middle finger up/down (while in scroll mode) → Scroll up/down
-- Thumb + Ring finger pinch → Start/stop selection (drag)
-- Thumb + Pinky finger pinch → Copy (Ctrl + C)
-- Thumb + Index + Middle finger pinch → Paste (Ctrl + V)
+---
 
-***Left Hand Gestures:-***
-- Thumb + Index finger pinch → Left click
-- Thumb + Middle finger pinch → Enable/disable zoom mode
-- Move middle finger up/down (while in zoom mode) → Zoom in/out
+## ✨ Features & Gesture Map
 
+The application differentiates between your **Left** and **Right** hand to offer a full range of desktop functionalities seamlessly.
+
+### 🛑 Right Hand (Navigation & Editing)
+* **Cursor Movement:** Simply move your right hand. The cursor utilizes an exponential smoothing algorithm ($0.75$) to reduce trembling and keep motion fluid.
+* **Right Click:** Pinch your **Thumb + Index finger** together.
+* **Scroll Mode:** Pinch your **Thumb + Middle finger**. Drag up or down to scroll documents or webpages dynamically.
+* **Text Selection (Click & Drag):** Pinch your **Thumb + Ring finger** to engage a mouse-down state; release to finish selecting text.
+* **Copy (Ctrl + C):** Pinch your **Thumb + Pinky finger**.
+* **Paste (Ctrl + V):** Pinch your **Thumb + Index + Middle fingers** simultaneously.
+
+### 👈 Left Hand (Execution & Sizing)
+* **Left Click:** Pinch your **Thumb + Index finger** together.
+* **Zoom Control:** Pinch your **Thumb + Middle finger** together. Moving your hand upwards zooms in (`Ctrl + +`), while moving downwards zooms out (`Ctrl + -`).
+
+---
+
+## 📸 System Interface
+
+| Tracking Feed & Live Status Overlay |
+| :---: |
+| ![Handi-Mouse Interface](images/interface_demo.png) |
+
+---
+
+## 🛠️ Installation & Setup
+
+Ensure you have Python installed on your machine. Then, follow these steps to set up Handi-Mouse locally:
+
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/YOUR-USERNAME/Handi-Mouse.git](https://github.com/YOUR-USERNAME/Handi-Mouse.git)
+cd Handi-Mouse
