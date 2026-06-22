@@ -15,11 +15,11 @@ The system independently tracks and processes inputs from both hands to prevent 
 ---
 
 ## 📦 Different Python Packages
-pip install numpy==1.26.4
-pip install opencv-python==4.9.0.80
-pip install pyautogui==0.9.54
-pip install protobuf==4.25.3
-pip install mediapipe==0.10.14
+* pip install numpy==1.26.4
+* pip install opencv-python==4.9.0.80
+* pip install pyautogui==0.9.54
+* pip install protobuf==4.25.3
+* pip install mediapipe==0.10.14
 
 ---
 
